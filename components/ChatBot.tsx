@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { MessageSquare, X, Send, Loader2, Bot, Sparkles } from 'lucide-react';
-import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
+import { GoogleGenerativeAI, Content } from "@google/generative-ai";
 
 // Portfolio Context Data for System Instruction
 const PORTFOLIO_CONTEXT = `
@@ -59,10 +59,7 @@ const ChatBot: React.FC = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Initialize Gemini Client
-  // NOTE: In a real app, ensure process.env.API_KEY is available. 
-  // If undefined, the chatbot will fail gracefully.
-  const apiKey = process.env.API_KEY || ''; 
+  const apiKey = import.meta.env.VITE_GEMINI_API_KEY || '';
   
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -80,59 +77,53 @@ const ChatBot: React.FC = () => {
 
   const handleSend = async () => {
     if (!input.trim()) return;
-    if (!apiKey) {
-        setMessages(prev => [...prev, { role: 'user', text: input }, { role: 'model', text: "I'm sorry, I'm currently offline (API Key not configured)." }]);
-        setInput('');
-        return;
-    }
 
-    const userMessage = input;
+    const userMessageText = input;
+    const currentMessages = [...messages, { role: 'user', text: userMessageText }];
+    setMessages(currentMessages);
     setInput('');
-    setMessages(prev => [...prev, { role: 'user', text: userMessage }]);
     setIsLoading(true);
 
     try {
-      const ai = new GoogleGenAI({ apiKey });
-      
-      // We use the 'gemini-2.5-flash' model for fast, efficient text chat
-      const chat = ai.chats.create({
-        model: 'gemini-2.5-flash',
-        config: {
-          systemInstruction: PORTFOLIO_CONTEXT,
-        },
-        history: messages.map(m => ({
-            role: m.role,
-            parts: [{ text: m.text }]
-        }))
-      });
+        const genAI = new GoogleGenerativeAI(apiKey);
+        // Use system instruction, which is the cleanest method for context.
+        const model = genAI.getGenerativeModel({
+            model: "gemini-2.5-flash",
+            systemInstruction: PORTFOLIO_CONTEXT,
+        });
 
-      const result = await chat.sendMessageStream({ message: userMessage });
-      
-      let fullResponse = "";
-      
-      // Add a placeholder message for the model
-      setMessages(prev => [...prev, { role: 'model', text: "" }]);
+        // The API requires a alternating user/model history.
+        // Our initial message is from the model, which breaks this.
+        // We filter out the initial welcome message from the history sent to the API.
+        const historyForApi = messages.slice(1).map(msg => ({
+            role: msg.role,
+            parts: [{ text: msg.text }]
+        }));
 
-      for await (const chunk of result) {
-        const text = (chunk as GenerateContentResponse).text;
-        if (text) {
-            fullResponse += text;
+        const chat = model.startChat({
+            history: historyForApi
+        });
+
+        const result = await chat.sendMessageStream(userMessageText);
+
+        let fullResponse = "";
+        // Add a placeholder for the streaming response
+        setMessages(prev => [...prev, { role: 'model', text: "" }]);
+
+        for await (const chunk of result.stream) {
+            fullResponse += chunk.text();
+            // Use functional update to edit the last message in the array
             setMessages(prev => {
                 const newMessages = [...prev];
-                const lastMessage = newMessages[newMessages.length - 1];
-                if (lastMessage.role === 'model') {
-                    lastMessage.text = fullResponse;
-                }
+                newMessages[newMessages.length - 1].text = fullResponse;
                 return newMessages;
             });
         }
-      }
-
     } catch (error) {
-      console.error("Error generating response:", error);
-      setMessages(prev => [...prev, { role: 'model', text: "Oops! I encountered an error. Please try again later." }]);
+        console.error("Error generating response:", error);
+        setMessages(prev => [...prev, { role: 'model', text: "Oops! I encountered an error. Please try again later." }]);
     } finally {
-      setIsLoading(false);
+        setIsLoading(false);
     }
   };
 
@@ -194,8 +185,7 @@ const ChatBot: React.FC = () => {
                 className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
               >
                 <div
-                  className={`max-w-[80%] p-3 rounded-2xl text-sm leading-relaxed ${
-                    msg.role === 'user'
+                  className={`max-w-[80%] p-3 rounded-2xl text-sm leading-relaxed ${msg.role === 'user'
                       ? 'bg-ibm-blue text-white rounded-tr-none'
                       : 'bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded-tl-none border border-slate-200 dark:border-slate-700'
                   }`}
@@ -216,7 +206,7 @@ const ChatBot: React.FC = () => {
           </div>
 
           {/* Input Area */}
-          <div className="p-4 border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shrink-0">
+          <div className="p-4 border-t border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900 shrink-0">
             <div className="relative flex items-center">
               <input
                 ref={inputRef}
