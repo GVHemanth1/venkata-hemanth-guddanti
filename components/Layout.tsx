@@ -114,6 +114,9 @@ export const Footer: React.FC = () => {
           <a href="https://github.com/GVHemanth1" target="_blank" rel="noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full text-slate-600 dark:text-slate-300 hover:text-white hover:bg-slate-900 dark:hover:bg-slate-700 transition-colors">
             <Github className="w-5 h-5" />
           </a>
+          <a href="https://wa.me/918500508085?text=Hello%20Hemanth%2C%20I%27m%20interested%20in%20your%20profile%20and%20would%20like%20to%20connect%21" target="_blank" rel="noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full text-slate-600 dark:text-slate-300 hover:text-white hover:bg-green-500 transition-colors">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="w-5 h-5 text-green-500 dark:text-green-400" />
+          </a>
           <a href="mailto:guddantivenkatahemanth@gmail.com" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full text-slate-600 dark:text-slate-300 hover:text-white hover:bg-red-500 transition-colors">
             <Mail className="w-5 h-5" />
           </a>

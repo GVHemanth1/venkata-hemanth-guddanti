@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import NetworkBackground from './components/NetworkBackground';
 import { Navbar, Footer } from './components/Layout';
 import Hero from './components/Hero';
+import AboutMe from './components/AboutMe';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Project from './components/Project';
@@ -39,6 +40,7 @@ function App() {
       
       <main className="relative z-0">
         <Hero />
+        {/* <AboutMe /> */}
         <Experience />
         <Skills />
         <Project />
