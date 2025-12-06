@@ -70,10 +70,11 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
           <button 
             onClick={toggleTheme}
             className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors"
+            aria-label="Toggle Theme"
           >
             {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
           </button>
-          <button className="text-slate-900 dark:text-white" onClick={() => setIsOpen(!isOpen)}>
+          <button className="text-slate-900 dark:text-white" onClick={() => setIsOpen(!isOpen)} aria-label={isOpen ? 'Close menu' : 'Open menu'}>
             {isOpen ? <X /> : <Menu />}
           </button>
         </div>
@@ -108,19 +109,19 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="flex gap-6">
-          <a href="https://www.linkedin.com/in/venkata-hemanth-guddanti-249bb812a/" target="_blank" rel="noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full text-slate-600 dark:text-slate-300 hover:text-white hover:bg-[#0077b5] transition-colors">
+          <a href="https://www.linkedin.com/in/venkata-hemanth-guddanti-249bb812a/" target="_blank" rel="noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full text-slate-600 dark:text-slate-300 hover:text-white hover:bg-[#0077b5] transition-colors" aria-label="LinkedIn profile">
             <Linkedin className="w-5 h-5" />
           </a>
-          <a href="https://github.com/GVHemanth1" target="_blank" rel="noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full text-slate-600 dark:text-slate-300 hover:text-white hover:bg-slate-900 dark:hover:bg-slate-700 transition-colors">
+          <a href="https://github.com/GVHemanth1" target="_blank" rel="noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full text-slate-600 dark:text-slate-300 hover:text-white hover:bg-slate-900 dark:hover:bg-slate-700 transition-colors" aria-label="GitHub profile">
             <Github className="w-5 h-5" />
           </a>
-          <a href="https://wa.me/918500508085?text=Hello%20Hemanth%2C%20I%27m%20interested%20in%20your%20profile%20and%20would%20like%20to%20connect%21" target="_blank" rel="noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full text-slate-600 dark:text-slate-300 hover:text-white hover:bg-green-500 transition-colors">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="w-5 h-5 text-green-500 dark:text-green-400" />
+          <a href="https://wa.me/918500508085?text=Hello%20Venkata%20Hemanth%2C%20I%20have%20gone%20through%20your%20profile%20and%20would%20like%20to%20connect." target="_blank" rel="noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full text-slate-600 dark:text-slate-300 hover:text-white hover:bg-green-500 transition-colors" aria-label="Send a message on WhatsApp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="" className="w-5 h-5" />
           </a>
-          <a href="mailto:guddantivenkatahemanth@gmail.com" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full text-slate-600 dark:text-slate-300 hover:text-white hover:bg-red-500 transition-colors">
+          <a href="mailto:guddantivenkatahemanth@gmail.com" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full text-slate-600 dark:text-slate-300 hover:text-white hover:bg-red-500 transition-colors" aria-label="Send an email">
             <Mail className="w-5 h-5" />
           </a>
-          <a href="tel:+918500508085" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full text-slate-600 dark:text-slate-300 hover:text-white hover:bg-green-500 transition-colors">
+          <a href="tel:+918500508085" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full text-slate-600 dark:text-slate-300 hover:text-white hover:bg-green-500 transition-colors" aria-label="Call me">
             <Phone className="w-5 h-5" />
           </a>
         </div>
