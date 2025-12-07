@@ -93,13 +93,8 @@ const Hero: React.FC = () => {
 
                     {/* Main Image */}
                     <div className="absolute inset-8 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl z-10 animate-float bg-slate-200 dark:bg-slate-800">
-                         <img 
-                            src="https://github.com/GVHemanth1.png" 
-                            onError={(e) => {
-                                // Fallback to a generated avatar if GitHub image fails
-                                e.currentTarget.src = "https://ui-avatars.com/api/?name=Venkata+Hemanth&background=0f62fe&color=fff&size=512";
-                                e.currentTarget.onerror = null; 
-                            }}
+                        <img 
+                            src="/avatar_1.png" 
                             alt="Venkata Hemanth Guddanti"
                             className="w-full h-full object-cover transition-transform duration-700 hover:scale-110" 
                         />
