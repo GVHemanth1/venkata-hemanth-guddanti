@@ -21,7 +21,7 @@ const Project: React.FC = () => {
                   {/* Left Sidebar - Meta Data */}
                   <div className="p-8 bg-slate-50 dark:bg-slate-800/80 border-r border-slate-200 dark:border-slate-700/50 flex flex-col h-full">
                       <div className="inline-flex items-center gap-2 px-3 py-1 bg-green-500/10 text-green-600 dark:bg-green-500/20 dark:text-green-400 rounded-full text-xs font-bold mb-4 w-fit">
-                          <Activity className="w-3 h-3" /> L2 PRODUCTION SUPPORT
+                          <Activity className="w-3 h-3" /> INTEGRATION DEVELOPER & PRODUCTION SUPPORT
                       </div>
                       <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">Cigna Healthcare</h3>
                       <p className="text-slate-600 dark:text-slate-400 text-sm mb-6">Health Services Integration</p>
