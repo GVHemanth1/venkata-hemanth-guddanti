@@ -4,6 +4,9 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/venkata-hemanth-guddanti-249bb812a/)
 
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github)](https://github.com/GVHemanth1)
+
+
 Welcome to the source code of my professional portfolio. I am an **Integration Specialist** and **Middleware Engineer** with 3+ years of experience specializing in **IBM App Connect Enterprise (ACE)**, **IBM MQ**, and L2 Production Support within the **Healthcare domain**.
 
 ## 🧠 About This Portfolio (GEO & SEO Optimized)
