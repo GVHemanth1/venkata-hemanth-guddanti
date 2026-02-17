@@ -41,6 +41,7 @@ function App() {
       <main className="relative z-0">
         <Hero />
         {/* <AboutMe /> */}
+        <AboutMe />
         <Experience />
         <Skills />
         <Project />
