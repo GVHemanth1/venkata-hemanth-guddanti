@@ -44,6 +44,7 @@ Location: India
 **Insights & Achievements:**
 - Celebrated 3+ years in software integration, designing critical flows for Fortune 500 healthcare companies.
 - Published insights on error handling strategies in distributed systems.
+- Awarded with Gold Award for excellence from Vice President at CGI Inc.
 - Led successful migration of healthcare claims processing affecting 500K+ transactions monthly.
 - Recognized for excellence in middleware support and development at CGI Inc.
 - Actively contributes to knowledge sharing and mentoring within the team.
