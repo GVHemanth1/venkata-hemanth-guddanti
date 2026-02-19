@@ -51,6 +51,16 @@ const Hero: React.FC = () => {
                 <span>GitHub</span>
               </a>
 
+              <a
+                href="https://medium.com/@venkatahemanth"
+                target="_blank"                
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-full transition-all border border-green-700 shadow-lg hover:-translate-y-1"
+              >
+                {/* <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Medium_logo.svg" alt="Medium" className="w-5 h-5 group-hover:scale-110 transition-transform" /> */}
+                <span>Medium</span>
+              </a>
+
               <a 
                 href="https://wa.me/918500508085?text=Hello%20Hemanth%2C%20I%27m%20interested%20in%20your%20profile%20and%20would%20like%20to%20connect%21" 
                 target="_blank" 
@@ -68,6 +78,7 @@ const Hero: React.FC = () => {
                 <Mail className="w-5 h-5 text-slate-600 dark:text-white group-hover:text-slate-900 transition-colors" />
                 <span>Email</span>
               </a>
+              
             </div>
           </FadeInSection>
         </div>

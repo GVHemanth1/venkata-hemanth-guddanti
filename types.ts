@@ -29,3 +29,17 @@ export interface ContactInfo {
   github: string;
   location: string;
 }
+
+export interface ContentPost {
+  id: string;
+  type: 'achievement' | 'article' | 'insight' | 'milestone';
+  title: string;
+  description: string;
+  content?: string;
+  date: Date;
+  tags?: string[];
+  readTime?: number;
+  icon?: string;
+  link?: string;
+  featured?: boolean;
+}

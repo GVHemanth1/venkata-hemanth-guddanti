@@ -7,6 +7,7 @@ import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Project from './components/Project';
 import Education from './components/Education';
+import Insights from './components/Insights';
 import ChatBot from './components/ChatBot';
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
         <Experience />
         <Skills />
         <Project />
+        <Insights />
         <Education />
       </main>
 
