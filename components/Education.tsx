@@ -31,7 +31,25 @@ const Education: React.FC = () => {
                     <div>
                         <h4 className="text-lg font-bold text-slate-800 dark:text-white">Microsoft Azure Fundamentals</h4>
                         <p className="text-slate-600 dark:text-slate-400 text-sm">AZ-900</p>
+                        {/* Need to provide certificate view link here along with details */}
+                        < a href="https://www.credly.com/badges/6a94b60e-46f7-4b74-8089-7341d7d083d9?source=linked_in_profile" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline text-sm mt-1 block">View Certificate</a>
+
                     </div>
+                    {/* Adding another certificate */}
+                </div>
+                <div className="bg-white dark:bg-slate-800/40 p-6 rounded-xl border border-slate-200 dark:border-slate-700 flex items-center gap-4 mt-6 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors shadow-sm">
+                    <div className="w-12 h-12 bg-green-500/10 rounded flex items-center justify-center">
+                    {/* https://upload.wikimedia.org/wikipedia/commons/4/44/git-icon.png is not working */}
+                        <img src="public\github-logo.png" alt="Git and GitHub" className="w-8 h-8" />
+                    </div>
+                    <div>
+                        <h4 className="text-lg font-bold text-slate-800 dark:text-white">Git and GitHub</h4>
+                        <p className="text-slate-600 dark:text-slate-400 text-sm">Udemy</p>
+                        {/* Need to provide certificate view link here along with details */}
+                        < a href="https://www.udemy.com/certificate/UC-5b24de33-829d-4136-8373-fcebeeeba316/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline text-sm mt-1 block">View Certificate</a>
+                    </div>
+                    
+
                 </div>
             </FadeInSection>
 
