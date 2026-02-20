@@ -1,6 +1,7 @@
 import React from 'react';
-import { GraduationCap, Award } from 'lucide-react';
+import { GraduationCap, Award, Github } from 'lucide-react';
 import FadeInSection from './FadeInSection';
+// import githubLogo from './github-logo.png';
 
 const Education: React.FC = () => {
   return (
@@ -40,7 +41,11 @@ const Education: React.FC = () => {
                 <div className="bg-white dark:bg-slate-800/40 p-6 rounded-xl border border-slate-200 dark:border-slate-700 flex items-center gap-4 mt-6 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors shadow-sm">
                     <div className="w-12 h-12 bg-green-500/10 rounded flex items-center justify-center">
                     {/* https://upload.wikimedia.org/wikipedia/commons/4/44/git-icon.png is not working */}
-                        <img src="public\github-logo.png" alt="Git and GitHub" className="w-8 h-8" />
+                        {/* <img src="public\github-logo.png" alt="Git and GitHub" className="w-8 h-8" /> */}
+                        {/* <img src={githubLogo} alt="GitHub" className="w-8 h-8" /> */}
+                        <Github className="w-8 h-8 text-black dark:text-white" />
+                    
+
                     </div>
                     <div>
                         <h4 className="text-lg font-bold text-slate-800 dark:text-white">Git and GitHub</h4>
