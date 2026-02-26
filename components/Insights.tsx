@@ -124,7 +124,6 @@ const Insights: React.FC = () => {
       icon: '⭐',
       featured: true,
     },
-    },
 
   ];
 
