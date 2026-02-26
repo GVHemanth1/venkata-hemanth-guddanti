@@ -101,7 +101,8 @@ const Insights: React.FC = () => {
       link: 'https://medium.com/@venkatahemanth/stop-cooking-your-laptop-moving-ibm-ace-development-to-the-cloud-for-free-dd730ca8b2ae',
       featured: true,
       icon: '🔮',
-          {
+    },
+    {
       id: '6',
       type: 'article',
       title: 'Modernizing Middleware ACE/IIB Development with Cloud-Based Ingrations',
