@@ -125,6 +125,15 @@ const Insights: React.FC = () => {
       icon: '⭐',
       featured: true,
     },
+    {
+      id: '8',
+      type: 'milestone',
+      title: 'Internship at Tiger Analytics',
+      description: 'Building the foundation in Azure Data Engineering, designing scalable ETL pipelines and cloud-based data solutions for high-velocity analytics.',
+      date: new Date('2022-08-30'),
+      tags: ['Career', 'Milestone'],
+      icon: '⭐',
+    },
 
   ];
 
