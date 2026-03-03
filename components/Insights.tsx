@@ -44,7 +44,7 @@ const Insights: React.FC = () => {
     {
       id: '1',
       type: 'milestone',
-      title: '3+ Years in Software Industry',
+      title: '3 Years in CGI',
       description: 'Celebrating 3 years of experience in designing and maintaining critical integration flows for Fortune 500 healthcare companies.',
       date: new Date('2025-10-03'),
       tags: ['Career', 'Milestone'],
@@ -118,7 +118,7 @@ const Insights: React.FC = () => {
     {
       id: '7',
       type: 'milestone',
-      title: '4 Years in Software industry',
+      title: '4 Years in IT industry',
       description: 'Celebrating 4 years of experience in designing and maintaining critical integration flows for Fortune 500 healthcare companies.',
       date: new Date('2026-03-15'),
       tags: ['Career', 'Milestone'],
