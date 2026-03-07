@@ -134,6 +134,19 @@ const Insights: React.FC = () => {
       tags: ['Career', 'Milestone'],
       icon: '⭐',
     },
+      {
+      id: '9',
+      type: 'article',
+      title: 'Modernizing Middleware ACE/IIB Development with Cloud-Based Ingrations',
+      description: 'Part 3 of 3: The Full Production Workflow in a Sandbox',
+      content: 'We are not going to use the convenient “Drag-and-Drop” in the Toolkit. Instead, we are going to use the true enterprise workflow — separating build from runtime — that perfectly mirrors how you deploy ACE in modern Kubernetes or Docker container environments.',
+      date: new Date('2026-03-07'),
+      tags: ['ACE Integration', 'DevOps integration', 'Architecture designing', 'Best Practices'],
+      readTime: 10,
+      link: 'https://medium.com/@venkatahemanth/mastering-the-lifecycle-end-to-end-ibm-ace-deployment-in-the-cloud-cc82b7636a5a',
+      featured: true,
+      icon: '🔮',
+    },
 
   ];
 
