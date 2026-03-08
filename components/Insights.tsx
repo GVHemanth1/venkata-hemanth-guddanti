@@ -98,7 +98,7 @@ const Insights: React.FC = () => {
       date: new Date('2026-02-19'),
       tags: ['ACE Integration', 'DevOps integration', 'Architecture designing', 'Best Practices'],
       readTime: 8,
-      link: 'https://medium.com/@venkatahemanth/stop-cooking-your-laptop-moving-ibm-ace-development-to-the-cloud-for-free-dd730ca8b2ae',
+      link: 'https://medium.com/@venkatahemanth/stop-cooking-your-laptop-moving-ibm-ace-development-to-the-cloud-for-free-dd730ca8b2ae','https://venkatahemanthguddanti.blogspot.com/2026/03/IIBCloudSeries.html',
       featured: true,
       icon: '🔮',
     },
