@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Github, Mail, Phone, Sun, Moon, Linkedin, BookOpen } from 'lucide-react';
+import { Menu, X, Github, Mail, Phone, Sun, Moon, Linkedin, BookOpen, Rss } from 'lucide-react';
 
 interface NavbarProps {
   theme: 'light' | 'dark';
@@ -118,6 +118,10 @@ export const Footer: React.FC = () => {
           </a>
           <a href="https://medium.com/@venkatahemanth" target="_blank" rel="noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full text-slate-600 dark:text-slate-300 hover:text-white hover:bg-slate-800 transition-colors" aria-label="Medium profile">
             <BookOpen className="w-5 h-5" />
+          </a>
+          {/* Added Blogspot Link Here */}
+          <a href="https://venkatahemanthguddanti.blogspot.com/" target="_blank" rel="noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full text-slate-600 dark:text-slate-300 hover:text-white hover:bg-[#f57c00] transition-colors" aria-label="Blogspot profile">
+            <Rss className="w-5 h-5" />
           </a>
           <a href="https://wa.me/918500508085?text=Hello%20Venkata%20Hemanth%2C%20I%20have%20gone%20through%20your%20profile%20and%20would%20like%20to%20connect." target="_blank" rel="noreferrer" className="p-3 bg-slate-100 dark:bg-slate-800 rounded-full text-slate-600 dark:text-slate-300 hover:text-white hover:bg-green-500 transition-colors" aria-label="Send a message on WhatsApp">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="" className="w-5 h-5" />
