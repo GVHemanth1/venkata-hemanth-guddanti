@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, Github, Mail, Server, Database, Network, Linkedin } from 'lucide-react';
+import { ArrowDown, Github, Mail, Server, Database, Network, Linkedin, Rss } from 'lucide-react';
 import FadeInSection from './FadeInSection';
 
 const Hero: React.FC = () => {
@@ -59,6 +59,16 @@ const Hero: React.FC = () => {
               >
                 {/* <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Medium_logo.svg" alt="Medium" className="w-5 h-5 group-hover:scale-110 transition-transform" /> */}
                 <span>Medium</span>
+              </a>
+              {/* Added Blogspot Button Here */}
+              <a 
+                href="https://venkatahemanthguddanti.blogspot.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 px-6 py-3 bg-[#f57c00] hover:bg-[#e67300] text-white rounded-full transition-all border border-[#f57c00] shadow-lg hover:-translate-y-1"
+              >
+                <Rss className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                <span>Blogspot</span>
               </a>
 
               <a 
