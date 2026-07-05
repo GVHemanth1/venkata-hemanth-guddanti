@@ -11,7 +11,7 @@ const experienceData: ExperienceItem[] = [
     period: "Feb 2026 - Present",
     description: "Collaborating directly with cross-functional teams and business stakeholders to translate key business insights into scalable enterprise integration solutions. Specializing in end-to-end middleware architecture, API development, and real-time technical guidance at the client headquarters.",
     technologies: ["Onsite", "IBM ACE", "IIB", "ESQL", "IBM MQ", "API Development"]
-  },
+  }, // <--- THIS COMMA WAS MISSING
   {
     id: "2",
     role: "Software Engineer",
@@ -29,7 +29,6 @@ const experienceData: ExperienceItem[] = [
     technologies: ["Azure", "Data Warehouse", "Data Engineering"]
   }
 ];
-
 const Experience: React.FC = () => {
   return (
     <section id="experience" className="py-20 px-6 bg-slate-100/50 dark:bg-slate-900/30 transition-colors duration-500">
