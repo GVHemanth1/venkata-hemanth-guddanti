@@ -147,6 +147,16 @@ const Insights: React.FC = () => {
       featured: true,
       icon: '🔮',
     },
+    {
+      id: '10',
+      type: 'milestone',
+      title: 'New Onsite Role at Allianz Malaysia',
+      description: 'Relocated to Kuala Lumpur to join Allianz as an Integration Developer. Focused on delivering robust enterprise middleware and API integration solutions.',
+      date: new Date('2026-02-14'),
+      tags: ['Career', 'Milestone', 'Relocation'],
+      icon: '🚀',
+      featured: true,
+    }
 
   ];
 
