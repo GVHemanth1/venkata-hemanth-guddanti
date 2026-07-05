@@ -6,14 +6,22 @@ import FadeInSection from './FadeInSection';
 const experienceData: ExperienceItem[] = [
   {
     id: "1",
+    role: "Integration Developer",
+    company: "Allianz Malaysia",
+    period: "Feb 2026 - Present",
+    description: "Onsite role. Specializing in enterprise integration solutions, middleware, and API development.",
+    technologies: ["IBM ACE", "IIB", "Development"]
+  },
+  {
+    id: "2",
     role: "Software Engineer",
     company: "CGI Inc.",
-    period: "Oct 2022 - Present",
+    period: "Oct 2022 - Feb 2026",
     description: "Working on IBM App Connect Enterprise (ACE) production support and development. Handling critical integration flows for healthcare clients.",
     technologies: ["IBM ACE", "Support", "Development"]
   },
   {
-    id: "2",
+    id: "3",
     role: "Intern - Data Warehouse & Azure",
     company: "Tiger Analytics",
     period: "Mar 2022 - Aug 2022",
