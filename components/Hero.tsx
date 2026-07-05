@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
 
           <FadeInSection delay={200}>
             <p className="max-w-2xl text-slate-600 dark:text-slate-300 text-lg md:text-xl leading-relaxed backdrop-blur-sm bg-white/50 dark:bg-slate-900/30 p-4 rounded-lg border-l-4 border-ibm-blue dark:border-neon-cyan shadow-sm mx-auto md:mx-0">
-              Enthusiastic IT professional with 3+ years of experience specializing in 
+              Enthusiastic IT professional with 4+ years of experience specializing in 
               <strong className="text-slate-900 dark:text-white"> IBM App Connect Enterprise (ACE)</strong> and Middleware integration. 
               I design efficient data flows that streamline complex business processes in the Healthcare domain.
             </p>
